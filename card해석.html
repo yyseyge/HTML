@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta charset="utf-8">
+        <meta name="author" content="301">
+        <meta name="description" content="html입문">
+        <meta name="keywords" content="프로트엔드">
+
+        div{display: inline-block;}
+
+        .container{
+            position: relative; -> 이걸지우면 p태그가 맨밑바닥으로 가서 붙어있음-> 이게 없으면, 부모가 static 상태가 되어버려서 자식인 p가 container가 아닌 body를 부모로 한다. 부모가 static 상태면 자식은 부모로 삼지않음.
+
+            width:200px -> div 박스 하나당 크기
+            height:100px
+            background-image:url()
+            border: 1px
+            margin left:100px -> 이렇게 하면 container끼리 왼쪽으로 간격 떨어지게 됨
+
+        }
+
+        p{
+            position:absolute; -> 이게 없으면 normal flow대로 박스에 붙어있다. absolute쓰면 공중에 띄어서 bottom 하면 밑으로 떨어지게 됨. absolute는 부모 위치 기반으로 상대적 위치 갖게됨. absolute를 사용하려면 부모가 position이 static이 아닌 relative나 absolute로 있어야 자식이 부모를 따라감. 부모가 공중에 떠서 있어야함
+
+            bottom:-100px
+            width: 100% => 100퍼센트는 부모사이즈만큼이다. p는 div의 자식이기 때문에
+            visibility:hidden; 
+
+        }
+
+
+        container:hover p{ -> container에 마우스 올렸을때 본인대상이 아닌 p를 대상으로 어떤걸 하겠다(container와 p는 부모자식 관계라 가능)
+            visibility: visible;
+        }
+
+
+        <li>-> 이건 세로로 리스트 형태로나오는데. 이걸 inline-block형태로 하면 가로로 배열 가능
+            네비는 ul안에 li안에 a로 만드는게 전형적이다.
+
+
